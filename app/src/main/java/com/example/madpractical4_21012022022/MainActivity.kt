@@ -10,6 +10,7 @@ import android.provider.ContactsContract
 import android.provider.MediaStore
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         val txtBrowse:EditText=findViewById(R.id.txt_browse)
         val btnCall:Button=findViewById(R.id.btn_call)
         val txtCall:EditText=findViewById(R.id.txt_call)
+        val txtAlarm:EditText=findViewById(R.id.txt_alarm)
 
         val btnContact:Button=findViewById(R.id.btn_contact)
         val btnCallLog:Button=findViewById(R.id.btn_call_log)
@@ -28,13 +30,25 @@ class MainActivity : AppCompatActivity() {
 
 
         btnBrowse.setOnClickListener {
-            Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://"+(txtBrowse.text.toString()))).apply {
-                startActivity(this)
+            if(txtBrowse.text.toString()!="")
+            {
+                Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://"+(txtBrowse.text.toString()))).apply {
+                    startActivity(this)
+                }
+            }
+            else{
+                Toast.makeText(this,"Please enter URL",Toast.LENGTH_SHORT).show()
             }
         }
         btnCall.setOnClickListener {
-            Intent(Intent.ACTION_DIAL).setData(Uri.parse("tel:"+txtCall.text.toString())).apply {
-                startActivity(this)
+            if(txtCall.text.toString()!="")
+            {
+                Intent(Intent.ACTION_DIAL).setData(Uri.parse("tel:"+txtCall.text.toString())).apply {
+                    startActivity(this)
+                }
+            }
+            else{
+                Toast.makeText(this,"Please enter mobile number",Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -58,6 +72,20 @@ class MainActivity : AppCompatActivity() {
         btnCamera.setOnClickListener {
             Intent(MediaStore.ACTION_IMAGE_CAPTURE).apply {
                 startActivity(this)
+            }
+        }
+        btnAlarm.setOnClickListener {
+            if(txtAlarm.text.toString()!="")
+            {
+                Intent(AlarmClock.ACTION_SET_ALARM).apply {
+                    this.putExtra(AlarmClock.EXTRA_MESSAGE, txtAlarm.text.toString())
+                    this.putExtra(AlarmClock.EXTRA_HOUR, 10)
+                    this.putExtra(AlarmClock.EXTRA_MINUTES, 30)
+                    startActivity(this)
+                }
+            }
+            else{
+                Toast.makeText(this,"Please enter Alarm Name",Toast.LENGTH_SHORT).show()
             }
         }
     }
