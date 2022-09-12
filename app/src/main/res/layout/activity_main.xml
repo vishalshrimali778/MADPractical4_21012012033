@@ -9,7 +9,8 @@
     <androidx.core.widget.NestedScrollView
         android:id="@+id/txt_camera"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -25,7 +26,6 @@
                 app:layout_constraintEnd_toStartOf="@id/btn_browse"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/btn_browse"
-
                 app:startIconDrawable="@drawable/ic_baseline_link_24">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -58,7 +58,6 @@
                 app:layout_constraintEnd_toStartOf="@id/btn_call"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/btn_call"
-
                 app:startIconDrawable="@drawable/ic_baseline_phone_24">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -90,7 +89,6 @@
                 app:layout_constraintEnd_toStartOf="@id/btn_contact"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/btn_contact"
-
                 app:startIconDrawable="@drawable/ic_baseline_folder_24">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -121,7 +119,6 @@
                 app:layout_constraintEnd_toStartOf="@id/btn_call_log"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/btn_call_log"
-
                 app:startIconDrawable="@drawable/ic_baseline_phone_forwarded_24">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -152,7 +149,6 @@
                 app:layout_constraintEnd_toStartOf="@id/btn_gallery"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/btn_gallery"
-
                 app:startIconDrawable="@drawable/ic_baseline_photo_24">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -183,7 +179,6 @@
                 app:layout_constraintEnd_toStartOf="@id/btn_camera"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/btn_camera"
-
                 app:startIconDrawable="@drawable/ic_baseline_photo_camera_24">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -213,7 +208,6 @@
                 app:layout_constraintEnd_toStartOf="@id/btn_alarm"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/btn_alarm"
-
                 app:startIconDrawable="@drawable/ic_baseline_alarm_24">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -233,7 +227,6 @@
                 app:cornerRadius="25dp"
                 app:layout_constraintEnd_toEndOf="@+id/btn_camera"
                 app:layout_constraintTop_toBottomOf="@+id/btn_camera" />
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
