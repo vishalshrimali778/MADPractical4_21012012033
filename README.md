@@ -1,4 +1,4 @@
-# MADPractical4_21012022022
+# MADPractical4_21012012033
 
 AIM: What is Intent? Write down types of Intent and types of Intent Action. Create an application which demonstrates implicit Intent for following features and also create different activities and demonstrate explicit Intent. Use parent theme Theme.Material3.Dark.NoActionBar for Dark theme and Theme.Material3.Light.NoActionBar for Light Theme
 
