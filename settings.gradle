@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "MADPractical4_21012022022"
+rootProject.name = "MADPractical4_21012012033"
 include ':app'
